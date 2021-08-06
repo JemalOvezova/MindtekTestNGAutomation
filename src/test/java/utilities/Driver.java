@@ -24,7 +24,6 @@ public class Driver {
 
     public static WebDriver getDriver(){
         // cross browser testing
-
         String browser = ConfigReader.getProperty("browser");
         // When you close driver, driver will have some object
         // but you can not use that object for next text scenario

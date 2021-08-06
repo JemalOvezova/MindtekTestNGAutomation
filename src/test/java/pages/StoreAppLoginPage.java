@@ -20,5 +20,14 @@ public class StoreAppLoginPage {
     @FindBy(id = "SubmitCreate")
     public WebElement submitButton;
 
+    @FindBy(id="email")
+    public WebElement loginEmailBox;
+
+    @FindBy(id = "passwd")
+    public WebElement loginPasswordBox;
+
+    @FindBy(id = "SubmitLogin")
+    public WebElement loginButton;
+
     }
 
