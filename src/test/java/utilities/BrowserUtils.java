@@ -2,6 +2,7 @@ package utilities;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -61,5 +62,14 @@ public class BrowserUtils {
         WebDriver driver = Driver.getDriver();
         JavascriptExecutor js = ((JavascriptExecutor)driver);
         js.executeScript("window.scrollBy(0,"+pixels+")");
+    }
+    /*
+    This method will hover over to element in browser.
+    Ex:
+        .hoverOver(element);
+     */
+    public static void hoverOver(WebElement element){
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(element).perform();
     }
 }
