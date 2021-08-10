@@ -69,5 +69,23 @@ public class StoreAddCartTests extends TestBase {
 
     }
 
+    @Test
+    public void addSecondItemToCartTest(){
+        StoreAppHomePage storeAppHomePage = new StoreAppHomePage();
+        StoreAppShoppingCartPage storeAppShoppingCartPage = new StoreAppShoppingCartPage();
+
+        driver.get(ConfigReader.getProperty("StoreAppURL"));
+        String itemPrice2 = storeAppHomePage.prices.get(1).getText();
+        BrowserUtils.scroll(800);
+        BrowserUtils.hoverOver(storeAppHomePage.item1);
+        BrowserUtils.hoverOver(storeAppHomePage.item2);
+
+        storeAppHomePage.addToCartItem1.click();
+        storeAppHomePage.addToCartItem2.click();
+
+
+
+    }
+
 
 }

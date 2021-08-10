@@ -42,5 +42,13 @@ public class StoreAppHomePage {
     @FindBy(xpath = "//a[@class='btn btn-default button button-medium']")
     public WebElement proceedToCheckout;
 
+    @FindBy(xpath = "//div/a[@title='Add to cart'])[2]")
+    public WebElement addToCartItem2;
+
+    @FindBy(xpath = "(//img[@title='Blouse'])[1]")
+    public WebElement item2;
+
+
+
 
 }
